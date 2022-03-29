@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+/*
+primary: #0F171E
+secondary: #1A242F
+font-primary: #FFF
+font-secondary: #79B8F3
+*/
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
