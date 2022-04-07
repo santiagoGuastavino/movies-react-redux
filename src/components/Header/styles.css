@@ -1,0 +1,60 @@
+.header-wrapper {
+    background-color: #1A242F;
+    width: 100vw;
+}
+
+.header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90vw;
+    margin: 0 auto;
+    padding: 10px 0;
+    height: 10vh;
+}
+
+.house-icon {
+    width: 33%;
+    font-size: 50px;
+}
+
+.logo-img {
+    width: 33%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center ;
+    font-size: 30px;
+}
+
+.logo-img img {
+    max-width: 75px;
+}
+
+.logo-img p {
+    color: #FFF;
+    font-weight: 600;
+}
+
+.user-icon {
+    width: 33%;
+    text-align: right;
+    font-size: 50px;
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}

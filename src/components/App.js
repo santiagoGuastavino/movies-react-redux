@@ -1,6 +1,5 @@
-import React from 'react';
 import './styles.css'
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './Header';
 import Home from './Home';
 import MovieDetail from './MovieDetail';
@@ -9,7 +8,7 @@ import Footer from './Footer';
 
 let App = () => {
   return (
-    <>
+    <Router>
       <div className='layout'>
         <Header />
           <Routes>
@@ -19,7 +18,7 @@ let App = () => {
           </Routes>
         <Footer />
       </div>
-    </>
+    </Router>
   )
 };
 

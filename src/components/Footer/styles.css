@@ -1,0 +1,31 @@
+.footer-wrapper {
+    background-color: #1A242F;
+    width: 100vw;
+}
+
+.footer {
+    width: 90vw;
+    margin: 0 auto;
+    height: 10vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}

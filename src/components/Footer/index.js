@@ -3,7 +3,12 @@ import './styles.css';
 
 let Footer = () => {
     return (
-        <h1>footer</h1>
+        <footer className='footer-wrapper'>
+            <div className='footer'>
+                <p>My Movie App</p>
+                <p>©2022, Movie, Inc. or its affiliates</p>
+            </div>
+        </footer>
     )
 };
 
