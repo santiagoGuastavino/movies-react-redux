@@ -1,3 +1,8 @@
+$c-main: #0F171E;
+$c-secondary: #1A242F;
+$font-c-main: #FFF;
+$font-c-secondary: #79B8F3;
+
 * {
     margin: 0;
     padding: 0;
@@ -25,13 +30,6 @@ img {
     margin: 0 auto;
     height: 80vh;
 }
-
-/*
-primary: #0F171E
-secondary: #1A242F
-font-primary: #FFF
-font-secondary: #79B8F3
-*/
 
 @media (min-width: 576px) {
 
