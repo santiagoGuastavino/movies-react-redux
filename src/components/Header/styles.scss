@@ -1,7 +1,7 @@
-@import '../styles.scss';
+@import '../../common/colors.scss';
 
 .header-wrapper {
-    background-color: #1A242F;
+    background-color: $secondary;
     width: 100vw;
 }
 
@@ -35,7 +35,7 @@
 }
 
 .logo-img p {
-    color: #FFF;
+    color: $font-main;
     font-weight: 600;
 }
 
