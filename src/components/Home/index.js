@@ -1,20 +1,29 @@
 import React, { useEffect } from 'react';
 import './styles.scss';
 import MovieListing from '../MovieListing';
-import { apiKey } from '../../utils/movieApiKey';
+import apiCall from'../../common/api/axiosInstance';
+import { apiKey } from '../../common/api/moviesApi';
+import banner from '../../images/banner.png';
 
 let Home = () => {
 
     useEffect(() => {
-        let movieText = 'Harry';
-        let fechtApi = async () => {
-            let response = await fetch(`?apiKey=${ apiKey }&s=${ movieText }&type=movie`)
-            .catch(err => { console.log('Err:' + err) });
-        }
-    })
+        let keyword = 'Harry';
+        let fetchMovies = async () => {
+            let response = await apiCall
+                .get(`/?apikey=${ apiKey }&s=${ keyword }&type=movie`)
+                .catch(err => console.log(err));
+            console.log(response);
+        };
+
+        fetchMovies();
+    }, [])
 
     return (
         <main className='main-main'>
+            <div>
+                <img src={ banner }  alt='banner-img' />
+            </div>
             <MovieListing />
         </main>
     )
