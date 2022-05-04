@@ -3,17 +3,17 @@
 .footer-wrapper {
     background-color: $secondary;
     width: 100vw;
-}
 
-.footer {
-    width: 90vw;
-    margin: 0 auto;
-    height: 10vh;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    color: $font-main;
+    div {
+        margin: 0 auto;
+        height: 3vh;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        color: $font-main;
+        font-size: 10px;
+    }
 }
 
 @media (min-width: 576px) {

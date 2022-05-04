@@ -7,8 +7,9 @@ import logoImg from '../../images/logo.png';
 
 let Header = () => {
     return (
+        <>
         <header className='header-wrapper'>
-            <nav className='header'>
+            <nav>
                 <Link to='/' className='house-icon'>
                     <FontAwesomeIcon icon={ faHouse } />
                 </Link>
@@ -19,8 +20,11 @@ let Header = () => {
                 <div className='user-icon'>
                     <FontAwesomeIcon icon={ faUser } />
                 </div>
+                
             </nav>
         </header>
+        <div className='banner-box'></div>
+        </>
     )
 };
 

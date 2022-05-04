@@ -1,0 +1,43 @@
+@import '../../common/colors.scss';
+
+.movies-wrapper {
+    max-width: 1000px;
+    width: 95vw;
+    margin: 0 auto;
+    height: 77vh;
+    margin: 0 auto;
+
+    .movies-header {
+        height: 3vh;
+
+        h2 {
+            vertical-align: center;
+            color: $font-secondary;
+            font-weight: 400;
+        }
+    }
+}
+
+.movies-container {
+    height: 73vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}

@@ -12,19 +12,9 @@ a, a:visited, a:active, a:hover {
     color: inherit;
 }
 
-img {
-    display: block;
-    width: 100%;
-}
-
 .layout {
     width: 100vw;
     background-color: $main;
-}
-
-.main-main {
-    width: 100vw;
-    height: 80vh;
 }
 
 @media (min-width: 576px) {

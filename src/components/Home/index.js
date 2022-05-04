@@ -3,27 +3,27 @@ import './styles.scss';
 import MovieListing from '../MovieListing';
 import apiCall from'../../common/api/axiosInstance';
 import { apiKey } from '../../common/api/moviesApi';
-import banner from '../../images/banner.png';
+import { useDispatch } from 'react-redux';
+import { addMovies } from '../../features/movies/movieSlice';
 
 let Home = () => {
 
+    let dispatch = useDispatch();
+    let keyword = 'Harry';
+
     useEffect(() => {
-        let keyword = 'Harry';
         let fetchMovies = async () => {
             let response = await apiCall
                 .get(`/?apikey=${ apiKey }&s=${ keyword }&type=movie`)
                 .catch(err => console.log(err));
-            console.log(response);
+            dispatch(addMovies(response.data));
         };
 
         fetchMovies();
-    }, [])
+    }, [keyword, dispatch])
 
     return (
-        <main className='main-main'>
-            <div>
-                <img src={ banner }  alt='banner-img' />
-            </div>
+        <main>
             <MovieListing />
         </main>
     )
