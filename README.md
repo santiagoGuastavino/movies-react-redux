@@ -10,6 +10,8 @@ _Still a WIP_
 &nbsp;&nbsp; *[react-router-dom](https://github.com/remix-run/react-router/blob/main/docs/getting-started/tutorial.md)*  
 &nbsp;&nbsp; *Redux.js*  
 &nbsp;&nbsp; *Redux-toolkit*
+&nbsp;&nbsp;&nbsp;&nbsp; **createSlice**
+&nbsp;&nbsp;&nbsp;&nbsp; **createAsyncThunk**
 - [Axios](https://www.npmjs.com/package/axios)
 - Sass
 - [Font Awesome React Component](https://fontawesome.com/v5/docs/web/use-with/react)
