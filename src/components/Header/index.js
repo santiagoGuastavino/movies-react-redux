@@ -10,9 +10,11 @@ let Header = () => {
         <>
         <header className='header-wrapper'>
             <nav>
-                <Link to='/' className='house-icon'>
-                    <FontAwesomeIcon icon={ faHouse } />
-                </Link>
+                <div className='house-icon'>
+                    <Link to='/'>
+                        <FontAwesomeIcon icon={ faHouse } />
+                    </Link>
+                </div>
                 <div className='logo-img'>
                     <img src={ logoImg } alt='logo-img' />
                     <p>My Movie App</p>

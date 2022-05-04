@@ -19,6 +19,10 @@
 .house-icon {
     width: 10%;
     font-size: 30px;
+
+    a {
+        color: $font-main;
+    }
 }
 
 .logo-img {
@@ -43,6 +47,11 @@
     width: 10%;
     text-align: right;
     font-size: 30px;
+    
+    svg {
+        cursor: pointer;
+        color: $font-main;
+    }
 }
 
 .banner-box {

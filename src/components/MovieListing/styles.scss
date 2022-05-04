@@ -4,7 +4,7 @@
     max-width: 1000px;
     width: 95vw;
     margin: 0 auto;
-    height: 77vh;
+    min-height: 77vh;
     margin: 0 auto;
 
     .movies-header {
@@ -19,7 +19,7 @@
 }
 
 .movies-container {
-    height: 73vh;
+    min-height: 73vh;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -35,7 +35,13 @@
 }
 
 @media (min-width: 992px) {
+    .movies-wrapper {
+        height: 77vh;
+    }
 
+    .movies-container {
+        height: 73vh;
+    }
 }
 
 @media (min-width: 1200px) {

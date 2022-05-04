@@ -12,11 +12,11 @@ let App = () => {
     <Router>
       <div className='layout'>
         <Header />
-          <Routes>
-            <Route exact path='/' element={ <Home /> } />
-            <Route exact path='/movie/:imbdId' element={ <MovieDetail /> } />
-            <Route path='*' element={ <NotFound /> } />
-          </Routes>
+        <Routes>
+          <Route exact path='/' element={ <Home /> } />
+          <Route exact path='/movie/:imbdId' element={ <MovieDetail /> } />
+          <Route path='*' element={ <NotFound /> } />
+        </Routes>
         <Footer />
       </div>
     </Router>
