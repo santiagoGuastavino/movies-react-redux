@@ -3,13 +3,20 @@ import apiCall from'../../common/api/axiosInstance';
 import { apiKey } from '../../common/api/moviesApi';
 
 export let fetchAsyncMovies = createAsyncThunk('movies/fetchAsyncMovies', async () => {
-    let keyword = 'Harry';
-    let response = await apiCall.get(`/?apikey=${ apiKey }&s=${ keyword }&type=movie`);
+    let moviesKeyword = 'Harry';
+    let response = await apiCall.get(`/?apikey=${ apiKey }&s=${ moviesKeyword }&type=movie`);
+    return response.data;
+});
+
+export let fetchAsyncShows = createAsyncThunk('movies/fetchAsyncShows', async () => {
+    let showsKeyword = 'Friends';
+    let response = await apiCall.get(`/?apikey=${ apiKey }&s=${ showsKeyword }&type=series`);
     return response.data;
 });
 
 let initialState = {
-    movies: {}
+    movies: {},
+    shows: {}
 };
 
 let movieSlice = createSlice({
@@ -22,18 +29,29 @@ let movieSlice = createSlice({
     },
     extraReducers: {
         [fetchAsyncMovies.pending]: () => {
-            console.log('Pending');
+            console.log('Movies fetch: pending');
         },
         [fetchAsyncMovies.fulfilled]: (state, { payload }) => {
-            console.log('Success');
+            console.log('Movies fetch: success');
             return {...state, movies: payload};
         },
         [fetchAsyncMovies.rejected]: () => {
-            console.log('Rejected');
+            console.log('Movies fetch: rejected');
+        },
+        [fetchAsyncShows.pending]: () => {
+            console.log('Shows fetch: pending');
+        },
+        [fetchAsyncShows.fulfilled]: (state, { payload }) => {
+            console.log('Shows fetch: success');
+            return {...state, shows: payload};
+        },
+        [fetchAsyncShows.rejected]: () => {
+            console.log('Shows fetch: rejected');
         }
     }
 });
 
 export let { addMovies } = movieSlice.actions;
 export let getAllMovies = (state) => state.movies.movies;
+export let getAllShows = (state) => state.movies.shows;
 export default movieSlice.reducer;
