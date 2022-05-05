@@ -3,13 +3,13 @@ import apiCall from'../../common/api/axiosInstance';
 import { apiKey } from '../../common/api/moviesApi';
 
 export let fetchAsyncMovies = createAsyncThunk('movies/fetchAsyncMovies', async () => {
-    let moviesKeyword = 'Harry';
+    let moviesKeyword = 'batman';
     let response = await apiCall.get(`/?apikey=${ apiKey }&s=${ moviesKeyword }&type=movie`);
     return response.data;
 });
 
 export let fetchAsyncShows = createAsyncThunk('movies/fetchAsyncShows', async () => {
-    let showsKeyword = 'Friends';
+    let showsKeyword = 'game';
     let response = await apiCall.get(`/?apikey=${ apiKey }&s=${ showsKeyword }&type=series`);
     return response.data;
 });

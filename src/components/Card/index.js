@@ -1,7 +1,7 @@
 import './styles.scss';
 import React from 'react';
 
-let MovieCard = ({ data }) => {
+let Card = ({ data }) => {
     return (
         <div className='card-outer'>
             <div className='card-top'>
@@ -15,4 +15,4 @@ let MovieCard = ({ data }) => {
     )
 };
 
-export default MovieCard;
+export default Card;

@@ -1,29 +1,27 @@
 @import '../../common/colors.scss';
 
-.movies-wrapper {
+.list-wrapper {
     max-width: 1000px;
     width: 95vw;
     margin: 0 auto;
-    min-height: 77vh;
+    min-height: 72vh;
     margin: 0 auto;
-
-    .movies-header {
-        height: 3vh;
-
-        h2 {
-            vertical-align: center;
-            color: $font-secondary;
-            font-weight: 400;
-        }
-    }
 }
 
-.movies-container {
-    min-height: 73vh;
+.list-container {
+    min-height: 72vh;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
+}
+
+.list-error {
+    align-self: flex-start;
+    display: flex;
+    flex-flow: row wrap;
+    color: $font-main;
+    margin-top: 30px;
 }
 
 @media (min-width: 576px) {
@@ -35,12 +33,12 @@
 }
 
 @media (min-width: 992px) {
-    .movies-wrapper {
-        height: 77vh;
+    .list-wrapper {
+        height: 72vh;
     }
 
-    .movies-container {
-        height: 73vh;
+    .list-container {
+        height: 72vh;
     }
 }
 
