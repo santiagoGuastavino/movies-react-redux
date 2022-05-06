@@ -49,7 +49,6 @@
     font-size: 30px;
     
     svg {
-        cursor: pointer;
         color: $font-main;
     }
 }
@@ -85,6 +84,11 @@
 @media (min-width: 768px) {
     .banner-box {
         background-size: contain;
+    }
+
+    .house-icon a svg, .user-icon svg {
+        cursor: pointer;
+        transition: all .15s cubic-bezier(.25, .25, .25, .25);
     }
 }
 

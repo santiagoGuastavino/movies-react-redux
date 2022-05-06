@@ -1,9 +1,13 @@
 import './styles.scss';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 let Card = ({ data }) => {
     return (
-        <div className='card-outer'>
+        <Link
+            to={`/detail/${ data.imdbID }`}
+            className='card-outer'
+        >
             <div className='card-top'>
                 <img src={ data.Poster } alt={ data.Title } />
             </div>
@@ -11,7 +15,7 @@ let Card = ({ data }) => {
                 <h4>{ data.Title }</h4>
                 <p>{ data.Year }</p>
             </div>
-        </div>
+        </Link>
     )
 };
 

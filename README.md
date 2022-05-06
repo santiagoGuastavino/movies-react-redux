@@ -1,15 +1,15 @@
 [Movies React Redux](https://smg-movies-redux.herokuapp.com/)
 ---
 
-_React.js application that uses Redux to manage states_  
+_React.js application that uses Redux to manage states._  
 _Still a WIP_
 <h3>For this project I used:</h3>  
 
 - [Node.js](https://nodejs.org)
 - React.js  
 &nbsp;&nbsp; *[react-router-dom](https://github.com/remix-run/react-router/blob/main/docs/getting-started/tutorial.md)*  
-&nbsp;&nbsp; *Redux.js*  
-&nbsp;&nbsp; *Redux-toolkit*
+&nbsp;&nbsp; *[React Redux](https://react-redux.js.org/)*  
+&nbsp;&nbsp; *[Redux Toolkit](https://redux-toolkit.js.org/)*
 &nbsp;&nbsp;&nbsp;&nbsp; **createSlice**
 &nbsp;&nbsp;&nbsp;&nbsp; **createAsyncThunk**
 - [Axios](https://www.npmjs.com/package/axios)

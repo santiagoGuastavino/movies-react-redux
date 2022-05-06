@@ -4,6 +4,7 @@
     max-width: 1000px;
     width: 95vw;
     margin: 0 auto;
+    min-height: 77vh;
 }
 
 .movies-header {
@@ -23,19 +24,14 @@
 }
 
 h4.clickable {
-    cursor: pointer;
     margin-left: auto;
     background-color: $secondary;
     border-radius: 8px;
-}
 
-h4.clickable::after {
-    content: ' \f25a';
-    font-family: FontAwesome;
-}
-
-h4.clickable:hover {
-    text-decoration: underline;
+    &::after {
+        content: ' \f25a';
+        font-family: FontAwesome;
+    }
 }
 
 @media (min-width: 576px) {
@@ -47,7 +43,13 @@ h4.clickable:hover {
 }
 
 @media (min-width: 768px) {
+    h4.clickable {
+        cursor: pointer;
 
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 @media (min-width: 992px) {

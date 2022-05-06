@@ -1,0 +1,27 @@
+@import '../../common/colors.scss';
+
+.detail-wrapper {
+    max-width: 1000px;
+    width: 95vw;
+    margin: 0 auto;
+    min-height: 77vh;
+    margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+    .detail-wrapper {
+        height: 77vh;
+    }
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}

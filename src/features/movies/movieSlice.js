@@ -14,9 +14,15 @@ export let fetchAsyncShows = createAsyncThunk('movies/fetchAsyncShows', async ()
     return response.data;
 });
 
+export let fetchAsyncDetail = createAsyncThunk('movies/fetchAsyncDetail', async (id) => {
+    let response = await apiCall.get(`/?apikey=${ apiKey }&i=${ id }&Plot=full`);
+    return response.data;
+});
+
 let initialState = {
     movies: {},
-    shows: {}
+    shows: {},
+    detail: {}
 };
 
 let movieSlice = createSlice({
@@ -28,30 +34,26 @@ let movieSlice = createSlice({
         }
     },
     extraReducers: {
-        [fetchAsyncMovies.pending]: () => {
-            console.log('Movies fetch: pending');
-        },
+        [fetchAsyncMovies.pending]: () => {},
         [fetchAsyncMovies.fulfilled]: (state, { payload }) => {
-            console.log('Movies fetch: success');
             return {...state, movies: payload};
         },
-        [fetchAsyncMovies.rejected]: () => {
-            console.log('Movies fetch: rejected');
-        },
-        [fetchAsyncShows.pending]: () => {
-            console.log('Shows fetch: pending');
-        },
+        [fetchAsyncMovies.rejected]: () => {},
+        [fetchAsyncShows.pending]: () => {},
         [fetchAsyncShows.fulfilled]: (state, { payload }) => {
-            console.log('Shows fetch: success');
             return {...state, shows: payload};
         },
-        [fetchAsyncShows.rejected]: () => {
-            console.log('Shows fetch: rejected');
-        }
+        [fetchAsyncShows.rejected]: () => {},
+        [fetchAsyncDetail.pending]: () => {},
+        [fetchAsyncDetail.fulfilled]: (state, { payload }) => {
+            return {...state, detail: payload};
+        },
+        [fetchAsyncDetail.rejected]: () => {}
     }
 });
 
 export let { addMovies } = movieSlice.actions;
 export let getAllMovies = (state) => state.movies.movies;
 export let getAllShows = (state) => state.movies.shows;
+export let getDetail = (state) => state.movies.detail;
 export default movieSlice.reducer;
