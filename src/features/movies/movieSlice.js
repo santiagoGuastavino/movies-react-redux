@@ -29,8 +29,8 @@ let movieSlice = createSlice({
     name: 'movies',
     initialState,
     reducers: {
-        addMovies: (state, { payload }) => {
-            state.movies = payload;
+        removeDetail: (state) => {
+            state.detail = {}
         }
     },
     extraReducers: {
@@ -52,7 +52,7 @@ let movieSlice = createSlice({
     }
 });
 
-export let { addMovies } = movieSlice.actions;
+export let { removeDetail } = movieSlice.actions;
 export let getAllMovies = (state) => state.movies.movies;
 export let getAllShows = (state) => state.movies.shows;
 export let getDetail = (state) => state.movies.detail;
