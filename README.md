@@ -13,6 +13,7 @@ _Still a WIP_
 &nbsp;&nbsp;&nbsp;&nbsp; **createSlice**
 &nbsp;&nbsp;&nbsp;&nbsp; **createAsyncThunk**
 - [Axios](https://www.npmjs.com/package/axios)
+- [The OMDB Api](https://www.omdbapi.com/)
 - Sass
 - [Font Awesome React Component](https://fontawesome.com/v5/docs/web/use-with/react)
 
