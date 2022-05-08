@@ -1,8 +1,8 @@
 [Movies React Redux](https://smg-movies-redux.herokuapp.com/)
 ---
 
-_This project is in a WIP state_  
-_React.js application that uses Redux to manage states._  
+_This project is in a WIP state._  
+_React.js application that uses Redux to manage states._
 <h3>For this project I used:</h3>  
 
 - [Node.js](https://nodejs.org)
