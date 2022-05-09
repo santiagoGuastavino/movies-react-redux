@@ -6,16 +6,16 @@ _React.js application that uses Redux to manage states._
 <h3>For this project I used:</h3>  
 
 - [Node.js](https://nodejs.org)
+    - [Axios](https://www.npmjs.com/package/axios)
 - React.js  
-&nbsp;&nbsp; *[react-router](https://github.com/remix-run/react-router/blob/main/docs/getting-started/tutorial.md)*  
-&nbsp;&nbsp; *[React Redux](https://react-redux.js.org/)*  
-&nbsp;&nbsp; *[Redux Toolkit](https://redux-toolkit.js.org/)*  
-&nbsp;&nbsp;&nbsp;&nbsp; **createSlice**  
-&nbsp;&nbsp;&nbsp;&nbsp; **createAsyncThunk**
-- [Axios](https://www.npmjs.com/package/axios)
+    - [react-router](https://github.com/remix-run/react-router/blob/main/docs/getting-started/tutorial.md)
+    - [React Redux](https://react-redux.js.org/)
+    - [Redux Toolkit](https://redux-toolkit.js.org/)
+        - createSlice
+        - createAsyncThunk
+    - [Font Awesome React Component](https://fontawesome.com/v5/docs/web/use-with/react)
 - [The OMDB Api](https://www.omdbapi.com/)
 - Sass
-- [Font Awesome React Component](https://fontawesome.com/v5/docs/web/use-with/react)
 
 ---
 
