@@ -1,29 +1,31 @@
-import React, { useEffect } from 'react';
-import './styles.scss';
-import { useLocation } from 'react-router-dom';
-import {
-    useDispatch,
-    useSelector
-} from 'react-redux';
+import React, {useEffect} from 'react'
+import './styles.scss'
+import {useLocation} from 'react-router-dom'
+import {useDispatch, useSelector} from 'react-redux'
 import {
     fetchAsyncDetail,
     getDetail,
     removeDetail
-} from '../../features/movies/movieSlice';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar, faThumbsUp, faFilm, faCalendar } from '@fortawesome/free-solid-svg-icons';
+} from '../../features/movies/movieSlice'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {
+    faStar,
+    faThumbsUp,
+    faFilm,
+    faCalendar
+} from '@fortawesome/free-solid-svg-icons'
 
-let Detail = () => {
+export default function Detail () {
 
     let imdbID = useLocation().pathname.slice(8)
     let dispatch = useDispatch()
     let data = useSelector(getDetail)
 
     useEffect(() => {
-        dispatch(fetchAsyncDetail(imdbID));
+        dispatch(fetchAsyncDetail(imdbID))
         return () => {
-            dispatch(removeDetail());
-        };
+            dispatch(removeDetail())
+        }
     }, [dispatch, imdbID])
 
     return (
@@ -36,42 +38,42 @@ let Detail = () => {
                     <section className='detail-section-left'>
                         <div className='detail-title'>
                             <h2>
-                                { data.Title }
+                                {data.Title}
                             </h2>
                         </div>
                         <div className='detail-rating'>
                             <div>
                                 <p>IMDB Rating</p>
-                                <FontAwesomeIcon icon={ faStar } />
+                                <FontAwesomeIcon icon={faStar} />
                                 <p>
-                                    { data.imdbRating }
+                                    {data.imdbRating}
                                 </p>
                             </div>
                             <div>
                                 <p>IMDB Votes</p>
-                                <FontAwesomeIcon icon={ faThumbsUp } />
+                                <FontAwesomeIcon icon={faThumbsUp} />
                                 <p>
-                                    { data.imdbVotes }
+                                    {data.imdbVotes}
                                 </p>
                             </div>
                             <div>
                                 <p>Runtime</p>
-                                <FontAwesomeIcon icon={ faFilm } />
+                                <FontAwesomeIcon icon={faFilm} />
                                 <p>
-                                    { data.Runtime }
+                                    {data.Runtime}
                                 </p>
                             </div>
                             <div>
                                 <p>Year</p>
-                                <FontAwesomeIcon icon={ faCalendar } />
+                                <FontAwesomeIcon icon={faCalendar} />
                                 <p>
-                                    { data.Year }    
+                                    {data.Year}    
                                 </p>
                             </div>
                         </div>
                         <div className='detail-plot'>
                             <p>
-                                { data.Plot }
+                                {data.Plot}
                             </p>
                         </div>
                         <div className='detail-info'>
@@ -80,7 +82,7 @@ let Detail = () => {
                                     Director
                                 </p>
                                 <p>
-                                    { data.Director } 
+                                    {data.Director} 
                                 </p>
                             </div>
                             <div>
@@ -88,7 +90,7 @@ let Detail = () => {
                                     Actors
                                 </p>
                                 <p>
-                                    { data.Actors } 
+                                    {data.Actors} 
                                 </p>
                             </div>
                             <div>
@@ -96,7 +98,7 @@ let Detail = () => {
                                     Genres
                                 </p>
                                 <p>
-                                    { data.Genre } 
+                                    {data.Genre} 
                                 </p>
                             </div>
                             <div>
@@ -104,7 +106,7 @@ let Detail = () => {
                                     Language
                                 </p>
                                 <p>
-                                    { data.Language } 
+                                    {data.Language} 
                                 </p>
                             </div>
                             <div>
@@ -112,18 +114,16 @@ let Detail = () => {
                                     Awards
                                 </p>
                                 <p>
-                                    { data.Awards } 
+                                    {data.Awards} 
                                 </p>
                             </div>
                         </div>
                     </section>
                     <section className='detail-section-right'>
-                        <img src={ data.Poster } alt={ data.Title } />
+                        <img src={data.Poster} alt={data.Title} />
                     </section>
                     </>
                 )}
         </article>
     )
-};
-
-export default Detail;
+}

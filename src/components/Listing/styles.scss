@@ -13,7 +13,8 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
+    color: $font-main;
 }
 
 .list-error {
@@ -24,14 +25,6 @@
     margin-top: 30px;
 }
 
-@media (min-width: 576px) {
-
-}
-
-@media (min-width: 768px) {
-
-}
-
 @media (min-width: 992px) {
     .list-wrapper {
         height: 72vh;
@@ -40,8 +33,4 @@
     .list-container {
         height: 72vh;
     }
-}
-
-@media (min-width: 1200px) {
-
 }

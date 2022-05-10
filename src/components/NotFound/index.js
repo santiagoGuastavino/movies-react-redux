@@ -1,10 +1,11 @@
-import React from 'react';
-import './styles.scss';
+import React from 'react'
+import './styles.scss'
 
-let NotFound = () => {
+export default function NotFound () {
     return (
-        <h1>not found</h1>
+        <>
+            <h1 className='not-found'>404</h1>
+            <h2 className='not-fount'>Not found</h2>
+        </>
     )
-};
-
-export default NotFound;
+}

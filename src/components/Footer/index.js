@@ -1,7 +1,7 @@
-import React from 'react';
-import './styles.scss';
+import React from 'react'
+import './styles.scss'
 
-let Footer = () => {
+export default function Footer () {
     return (
         <footer className='footer-wrapper'>
             <div>
@@ -10,6 +10,4 @@ let Footer = () => {
             </div>
         </footer>
     )
-};
-
-export default Footer;
+}

@@ -5,6 +5,7 @@
     width: 95vw;
     margin: 0 auto;
     min-height: 77vh;
+    color: $font-main;
 }
 
 .movies-header {
@@ -15,11 +16,15 @@
     justify-content: flex-start;
     align-items: center;
 
+
     h4 {
         vertical-align: center;
         color: $font-secondary;
         font-weight: 400;
         padding: 2px;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
     }
 }
 
@@ -27,6 +32,7 @@ h4.clickable {
     margin-left: auto;
     background-color: $secondary;
     border-radius: 8px;
+    display: block;
 
     &::after {
         content: ' \f25a';
@@ -34,9 +40,36 @@ h4.clickable {
     }
 }
 
+.main-home {
+    input {
+        border: none;
+        background-color: $secondary;
+        font-size: 16px;
+        margin-left: 5px;
+        width: 80px;
+        border-radius: 8px;
+        color: $font-main;
+        height: 23px;
+        padding-left: 5px;
+
+        &:focus {
+            background-color: $secondary;
+            outline: $secondary
+        }
+    }
+}
+
 @media (min-width: 576px) {
     .movies-header {
         h4 {
+            font-size: 24px;
+        }
+    }
+
+    .main-home {
+        input {
+            height: 33px;
+            width: 150px;
             font-size: 24px;
         }
     }
@@ -50,12 +83,12 @@ h4.clickable {
             text-decoration: underline;
         }
     }
-}
 
-@media (min-width: 992px) {
+    .main-home {
+        input {
+            font-size: 24px;
+            width: 150px;
 
-}
-
-@media (min-width: 1200px) {
-
+        }
+    }
 }

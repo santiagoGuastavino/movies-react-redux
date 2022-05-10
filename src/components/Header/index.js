@@ -1,26 +1,26 @@
-import React from 'react';
-import './styles.scss';
-import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faUser } from '@fortawesome/free-solid-svg-icons';
-import logoImg from '../../images/logo.png';
+import React from 'react'
+import './styles.scss'
+import {Link} from 'react-router-dom'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faHouse, faUser} from '@fortawesome/free-solid-svg-icons'
+import logoImg from '../../images/logo.png'
 
-let Header = () => {
+export default function Header () {
     return (
         <>
         <header className='header-wrapper'>
             <nav>
                 <div className='house-icon'>
                     <Link to='/'>
-                        <FontAwesomeIcon icon={ faHouse } />
+                        <FontAwesomeIcon icon={faHouse} />
                     </Link>
                 </div>
                 <div className='logo-img'>
-                    <img src={ logoImg } alt='logo-img' />
+                    <img src={logoImg} alt='logo-img' />
                     <p>My Movie App</p>
                 </div>
                 <div className='user-icon'>
-                    <FontAwesomeIcon icon={ faUser } />
+                    <FontAwesomeIcon icon={faUser} />
                 </div>
                 
             </nav>
@@ -28,6 +28,4 @@ let Header = () => {
         <div className='banner-box'></div>
         </>
     )
-};
-
-export default Header;
+}
