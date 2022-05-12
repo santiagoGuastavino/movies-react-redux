@@ -1,9 +1,9 @@
 import './styles.scss'
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function Card ({ data }) {
-    return (
+  return (
         <Link
             to={`/detail/${data.imdbID}`}
             className='card-outer'
@@ -16,5 +16,5 @@ export default function Card ({ data }) {
                 <p>{data.Year}</p>
             </div>
         </Link>
-    )
+  )
 }

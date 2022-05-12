@@ -1,12 +1,12 @@
 import React from 'react'
 import './styles.scss'
-import {Link} from 'react-router-dom'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faHouse, faUser} from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHouse, faUser } from '@fortawesome/free-solid-svg-icons'
 import logoImg from '../../images/logo.png'
 
 export default function Header () {
-    return (
+  return (
         <>
         <header className='header-wrapper'>
             <nav>
@@ -22,10 +22,10 @@ export default function Header () {
                 <div className='user-icon'>
                     <FontAwesomeIcon icon={faUser} />
                 </div>
-                
+
             </nav>
         </header>
         <div className='banner-box'></div>
         </>
-    )
+  )
 }

@@ -1,43 +1,42 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import './styles.scss'
-import {useSelector} from 'react-redux'
-import {getAllMovies, getAllShows} from '../../features/movies/movieSlice'
+import { useSelector } from 'react-redux'
+import { getAllMovies, getAllShows } from '../../features/movies/movieSlice'
 import Card from '../Card'
 
 export default function Listing ({ list }) {
+  const movies = useSelector(getAllMovies)
+  const shows = useSelector(getAllShows)
 
-    let movies = useSelector(getAllMovies)
-    let shows = useSelector(getAllShows)
-    
-    let [render, setRender] = useState()
+  const [render, setRender] = useState()
 
-    useEffect(() => {
-        list === 'movies' &&
+  useEffect(() => {
+    list === 'movies' &&
         movies.Response === 'True' &&
         setRender(movies.Search)
 
-        list === 'movies' &&
+    list === 'movies' &&
         movies.Response !== 'True' &&
         setRender(movies.Error)
 
-        list === 'shows' &&
+    list === 'shows' &&
         shows.Response === 'True' &&
         setRender(shows.Search)
 
-        list === 'shows' &&
+    list === 'shows' &&
         shows.Response !== 'True' &&
         setRender(shows.Error)
-        
-        console.log(render)
-    }, [list, render, movies, shows])
 
-    return (
+    console.log(render)
+  }, [list, render, movies, shows])
+
+  return (
         <article className='list-wrapper'>
             <div className='list-container'>
                 {
                     render && Array.isArray(render) &&
                     render.map((item, i) => {
-                        return <Card
+                      return <Card
                             key={i}
                             data={item}
                         />
@@ -55,5 +54,5 @@ export default function Listing ({ list }) {
                 }
             </div>
         </article>
-    )
+  )
 }

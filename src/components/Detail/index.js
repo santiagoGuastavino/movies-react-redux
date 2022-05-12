@@ -1,39 +1,40 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import './styles.scss'
-import {useLocation} from 'react-router-dom'
-import {useDispatch, useSelector} from 'react-redux'
+import { useLocation } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
 import {
-    fetchAsyncDetail,
-    getDetail,
-    removeDetail
+  fetchAsyncDetail,
+  getDetail,
+  removeDetail
 } from '../../features/movies/movieSlice'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-    faStar,
-    faThumbsUp,
-    faFilm,
-    faCalendar
+  faStar,
+  faThumbsUp,
+  faFilm,
+  faCalendar
 } from '@fortawesome/free-solid-svg-icons'
 
 export default function Detail () {
+  const imdbID = useLocation().pathname.slice(8)
+  const dispatch = useDispatch()
+  const data = useSelector(getDetail)
 
-    let imdbID = useLocation().pathname.slice(8)
-    let dispatch = useDispatch()
-    let data = useSelector(getDetail)
+  useEffect(() => {
+    dispatch(fetchAsyncDetail(imdbID))
+    return () => {
+      dispatch(removeDetail())
+    }
+  }, [dispatch, imdbID])
 
-    useEffect(() => {
-        dispatch(fetchAsyncDetail(imdbID))
-        return () => {
-            dispatch(removeDetail())
-        }
-    }, [dispatch, imdbID])
-
-    return (
+  return (
         <article className='detail-wrapper'>
             {
-                Object.keys(data).length === 0 ? (
+                Object.keys(data).length === 0
+                  ? (
                     <div>...Loading</div>
-                ) : (
+                    )
+                  : (
                     <>
                     <section className='detail-section-left'>
                         <div className='detail-title'>
@@ -67,7 +68,7 @@ export default function Detail () {
                                 <p>Year</p>
                                 <FontAwesomeIcon icon={faCalendar} />
                                 <p>
-                                    {data.Year}    
+                                    {data.Year}
                                 </p>
                             </div>
                         </div>
@@ -82,7 +83,7 @@ export default function Detail () {
                                     Director
                                 </p>
                                 <p>
-                                    {data.Director} 
+                                    {data.Director}
                                 </p>
                             </div>
                             <div>
@@ -90,7 +91,7 @@ export default function Detail () {
                                     Actors
                                 </p>
                                 <p>
-                                    {data.Actors} 
+                                    {data.Actors}
                                 </p>
                             </div>
                             <div>
@@ -98,7 +99,7 @@ export default function Detail () {
                                     Genres
                                 </p>
                                 <p>
-                                    {data.Genre} 
+                                    {data.Genre}
                                 </p>
                             </div>
                             <div>
@@ -106,7 +107,7 @@ export default function Detail () {
                                     Language
                                 </p>
                                 <p>
-                                    {data.Language} 
+                                    {data.Language}
                                 </p>
                             </div>
                             <div>
@@ -114,7 +115,7 @@ export default function Detail () {
                                     Awards
                                 </p>
                                 <p>
-                                    {data.Awards} 
+                                    {data.Awards}
                                 </p>
                             </div>
                         </div>
@@ -123,7 +124,7 @@ export default function Detail () {
                         <img src={data.Poster} alt={data.Title} />
                     </section>
                     </>
-                )}
+                    )}
         </article>
-    )
+  )
 }

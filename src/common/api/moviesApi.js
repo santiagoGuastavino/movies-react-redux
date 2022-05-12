@@ -1,1 +1,1 @@
-export let apiKey = '80d5ab49'
+export const apiKey = '80d5ab49'

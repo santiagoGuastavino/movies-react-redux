@@ -15,6 +15,7 @@ _React.js application that uses Redux to manage states._
     - [Font Awesome React Component](https://fontawesome.com/v5/docs/web/use-with/react)
 - [The OMDB Api](https://www.omdbapi.com/)
 - Sass
+- [ESLint](https://www.npmjs.com/package/eslint)
 
 ---
 
