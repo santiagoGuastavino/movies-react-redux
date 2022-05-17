@@ -1,36 +1,36 @@
 @import '../../common/colors.scss';
 
 .list-wrapper {
-    max-width: 1000px;
-    width: 95vw;
-    margin: 0 auto;
-    min-height: 72vh;
-    margin: 0 auto;
+  max-width: 1000px;
+  width: 95vw;
+  margin: 0 auto;
+  min-height: 72vh;
+  margin: 0 auto;
 }
 
 .list-container {
-    min-height: 72vh;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    color: $font-main;
+  min-height: 72vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: $font-main;
 }
 
 .list-error {
-    align-self: flex-start;
-    display: flex;
-    flex-flow: row wrap;
-    color: $font-main;
-    margin-top: 30px;
+  align-self: flex-start;
+  display: flex;
+  flex-flow: row wrap;
+  color: $font-main;
+  margin-top: 30px;
 }
 
 @media (min-width: 992px) {
-    .list-wrapper {
-        height: 72vh;
-    }
+  .list-wrapper {
+    height: 72vh;
+  }
 
-    .list-container {
-        height: 72vh;
-    }
+  .list-container {
+    height: 72vh;
+  }
 }

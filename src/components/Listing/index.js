@@ -12,47 +12,47 @@ export default function Listing ({ list }) {
 
   useEffect(() => {
     list === 'movies' &&
-        movies.Response === 'True' &&
-        setRender(movies.Search)
+      movies.Response === 'True' &&
+      setRender(movies.Search)
 
     list === 'movies' &&
-        movies.Response !== 'True' &&
-        setRender(movies.Error)
+      movies.Response !== 'True' &&
+      setRender(movies.Error)
 
     list === 'shows' &&
-        shows.Response === 'True' &&
-        setRender(shows.Search)
+      shows.Response === 'True' &&
+      setRender(shows.Search)
 
     list === 'shows' &&
-        shows.Response !== 'True' &&
-        setRender(shows.Error)
+      shows.Response !== 'True' &&
+      setRender(shows.Error)
 
     console.log(render)
   }, [list, render, movies, shows])
 
   return (
-        <article className='list-wrapper'>
-            <div className='list-container'>
-                {
-                    render && Array.isArray(render) &&
-                    render.map((item, i) => {
-                      return <Card
-                            key={i}
-                            data={item}
-                        />
-                    })
-                }
-                {
-                    render && Array.isArray(render) && render.lenght === 0 &&
-                    <div>...Loading</div>
-                }
-                {
-                    render && !Array.isArray(render) &&
-                    <div className='list-error'>
-                        <h3>{render}</h3>
-                    </div>
-                }
-            </div>
-        </article>
+    <article className='list-wrapper'>
+      <div className='list-container'>
+        {
+          render && Array.isArray(render) &&
+          render.map((item, i) => {
+            return <Card
+                key={i}
+                data={item}
+              />
+          })
+        }
+        {
+          render && Array.isArray(render) && render.lenght === 0 &&
+          <div>...Loading</div>
+        }
+        {
+          render && !Array.isArray(render) &&
+          <div className='list-error'>
+            <h3>{render}</h3>
+          </div>
+        }
+      </div>
+    </article>
   )
 }

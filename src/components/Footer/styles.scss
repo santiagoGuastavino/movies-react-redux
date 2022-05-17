@@ -1,17 +1,17 @@
 @import '../../common/colors.scss';
 
 .footer-wrapper {
-    background-color: $secondary;
-    width: 100vw;
+  background-color: $secondary;
+  width: 100vw;
 
-    div {
-        margin: 0 auto;
-        height: 3vh;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-        color: $font-main;
-        font-size: 10px;
-    }
+  div {
+    margin: 0 auto;
+    height: 3vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    color: $font-main;
+    font-size: 10px;
+  }
 }

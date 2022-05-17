@@ -18,45 +18,45 @@ export default function Home () {
   }, [dispatch, keyword])
 
   return (
-        <main className='main-home'>
-            <header className='movies-header'>
-                <h4>You are browsing:</h4>
-                <h4
-                    onClick={() => { setList('movies') }}
-                    style={list === 'movies' ? { order: '0' } : { order: '1' }}
-                    className={list === 'shows' ? 'clickable' : null}
-                >
-                    Movies
-                    {
-                        list === 'movies' &&
-                        <input
-                            onInput={(e) => setKeyword(e.target.value)}
-                            value={keyword}
-                        />
-                    }
-                </h4>
-                <h4
-                    onClick={() => { setList('shows') }}
-                    style={list === 'shows' ? { order: '0' } : { order: '1' }}
-                    className={list === 'movies' ? 'clickable' : null}
-                >
-                    Shows
-                    {
-                        list === 'shows' &&
-                        <input
-                            onInput={(e) => setKeyword(e.target.value)}
-                            value={keyword}
-                        />
-                    }
-                </h4>
-            </header>
+    <main className='main-home'>
+      <header className='movies-header'>
+          <h4>You are browsing:</h4>
+          <h4
+            onClick={() => { setList('movies') }}
+            style={list === 'movies' ? { order: '0' } : { order: '1' }}
+            className={list === 'shows' ? 'clickable' : null}
+          >
+            Movies
             {
-                keyword === ''
-                  ? <div>Enter a search term</div>
-                  : <Listing
-                        list={list}
-                    />
+              list === 'movies' &&
+              <input
+                onInput={(e) => setKeyword(e.target.value)}
+                value={keyword}
+              />
             }
-        </main>
+          </h4>
+          <h4
+            onClick={() => { setList('shows') }}
+            style={list === 'shows' ? { order: '0' } : { order: '1' }}
+            className={list === 'movies' ? 'clickable' : null}
+          >
+            Shows
+            {
+              list === 'shows' &&
+            <input
+                onInput={(e) => setKeyword(e.target.value)}
+                value={keyword}
+              />
+            }
+          </h4>
+      </header>
+      {
+        keyword === ''
+          ? <div>Enter a search term</div>
+          : <Listing
+              list={list}
+            />
+      }
+    </main>
   )
 }
