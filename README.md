@@ -7,8 +7,8 @@ _React.js application that uses Redux to manage states._
 - [Node.js](https://nodejs.org)
     - [Axios](https://www.npmjs.com/package/axios)
 - React.js  
-    - [react-router](https://github.com/remix-run/react-router/blob/main/docs/getting-started/tutorial.md)
-    - [React Redux](https://react-redux.js.org/)
+    - [react-router-dom](https://github.com/remix-run/react-router/blob/main/docs/getting-started/tutorial.md)
+    - [Redux](https://react-redux.js.org/)
     - [Redux Toolkit](https://redux-toolkit.js.org/)
         - createSlice
         - createAsyncThunk
