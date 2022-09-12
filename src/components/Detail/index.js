@@ -27,10 +27,6 @@ export default function Detail () {
     }
   }, [dispatch, imdbID])
 
-  Object.keys(data).length === 0
-    ? (console.log('lala'))
-    : (console.log('not'))
-
   return (
     <article className='detail-wrapper'>
       {

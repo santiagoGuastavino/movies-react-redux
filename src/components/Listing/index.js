@@ -26,8 +26,6 @@ export default function Listing ({ list }) {
     list === 'shows' &&
       shows.Response !== 'True' &&
       setRender(shows.Error)
-
-    console.log(render)
   }, [list, render, movies, shows])
 
   return (
